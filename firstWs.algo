@@ -1,0 +1,25 @@
+ALGORITHM Sentence
+VAR
+    num_vow,num_words,num_char:INTEGER;
+    s:STRING;
+    len:INTEGER;
+    i:INTEGER;
+
+BEGIN
+   Write('write your sentence.');
+//    rakkaz maaya ya si moez.
+   Read(s);
+   len:=length(s)
+   FOR i=0 FROM 0 TO len STEP 1  DO
+       IF (s[i]=' ') THEN
+           num_words:=num_words+1;
+       END_IF
+       IF (s[i]=('a' OR 'u' OR 'i' OR 'e' OR 'o' OR 'y')) THEN
+           num_vow:=num_vow+1;
+       END_IF
+   END_FOR
+   num_char:=len-num_words
+   Write('number of vowls',num_vow)
+   Write('number of charachters',num_char)
+   Write('number of words',num_words+1)
+END
